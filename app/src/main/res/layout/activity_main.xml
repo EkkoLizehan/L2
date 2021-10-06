@@ -16,15 +16,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/warriors" />
+        app:srcCompat="@drawable/warriors"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/LOGO" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="321dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:text="Sports Team Manager"
-        android:textSize="30dp"
+        android:text="@string/STM"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgT"
@@ -35,7 +37,7 @@
         android:layout_width="105dp"
         android:layout_height="27dp"
         android:layout_marginBottom="40dp"
-        android:text="Team Name"
+        android:text="@string/tName"
         app:layout_constraintBottom_toTopOf="@+id/editT2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +48,7 @@
         android:layout_width="111dp"
         android:layout_height="27dp"
         android:layout_marginBottom="40dp"
-        android:text="Team Address"
+        android:text="@string/tAddress"
         app:layout_constraintBottom_toTopOf="@+id/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
