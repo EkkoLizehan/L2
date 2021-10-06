@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
         img.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 OnSetAvatarButton(v);
+
             }
         });
     }
@@ -117,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK) {
                             Intent data = result.getData();
-                            onActivityResult(result);
                         }
                 }
             });
