@@ -119,6 +119,44 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK) {
                             Intent data = result.getData();
+
+                            ImageView avatarImage = (ImageView) findViewById(R.id.imgT);
+                            String drawableName;
+
+                            switch (data.getIntExtra("imageID", R.id.img1)) {
+                                case R.id.img1:
+                                    drawableName = "bulls";
+                                    break;
+                                case R.id.img2:
+                                    drawableName = "celtics";
+                                    break;
+                                case R.id.img3:
+                                    drawableName = "bucks";
+                                    break;
+                                case R.id.img4:
+                                    drawableName = "nets";
+                                    break;
+                                case R.id.img5:
+                                    drawableName = "lakers";
+                                    break;
+                                case R.id.img6:
+                                    drawableName = "clippers";
+                                    break;
+                                case R.id.img8:
+                                    drawableName = "rocket";
+                                    break;
+                                case R.id.img9:
+                                    drawableName = "raptors";
+                                    break;
+                                default:
+                                    drawableName = "warriors";
+                                    break;
+                            }
+                            int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+                            avatarImage.setImageResource(resID);
+
+
+
                         }
                 }
             });
@@ -128,47 +166,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
         profileActivityResultLauncher.launch(intent);
 
-    }
-
-    protected void onActivityResult (ActivityResult result){
-        if (result.getResultCode() == Activity.RESULT_OK) {
-            Intent data = result.getData();
-
-            ImageView avatarImage = (ImageView) findViewById(R.id.imgT);
-            String drawableName;
-
-            switch (data.getIntExtra("imageID", R.id.img1)) {
-                case R.id.img1:
-                    drawableName = "bulls";
-                    break;
-                case R.id.img2:
-                    drawableName = "celtics";
-                    break;
-                case R.id.img3:
-                    drawableName = "bucks";
-                    break;
-                case R.id.img4:
-                    drawableName = "nets";
-                    break;
-                case R.id.img5:
-                    drawableName = "lakers";
-                    break;
-                case R.id.img6:
-                    drawableName = "clippers";
-                    break;
-                case R.id.img8:
-                    drawableName = "rocket";
-                    break;
-                case R.id.img9:
-                    drawableName = "raptors";
-                    break;
-                default:
-                    drawableName = "warriors";
-                    break;
-            }
-            int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
-            avatarImage.setImageResource(resID);
-
-        }
     }
 }
