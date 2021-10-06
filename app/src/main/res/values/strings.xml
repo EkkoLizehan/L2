@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="display2">Please Enter a Postal Name</string>
+    <string name="display1">Please Enter a Team Name</string>
 </resources>
