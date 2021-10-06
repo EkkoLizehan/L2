@@ -3,4 +3,8 @@
     <string name="display2">Please Enter a Postal Name</string>
     <string name="display1">Please Enter a Team Name</string>
     <string name="button">OPEN IN GOOGLE MAPS</string>
+    <string name="tName">Team Name</string>
+    <string name="tAddress">Team Address</string>
+    <string name="STM">Sports Team Manager</string>
+    <string name="LOGO">LOGO</string>
 </resources>
